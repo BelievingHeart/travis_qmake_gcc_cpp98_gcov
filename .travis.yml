@@ -1,6 +1,8 @@
 sudo: require
 language: cpp
 compiler: gcc
+git:
+  depth: 3
 
 before_install: 
  - sudo pip install codecov
@@ -14,3 +16,4 @@ script:
 
 after_success:
  - bash <(curl -s https://codecov.io/bash)
+
